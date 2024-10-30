@@ -14,15 +14,15 @@ def main(argv):
         value_fields = fields[1].split(",") # field 1 is values split on comma
         
         if person_id == current_person_id: # if it's still the same person being processed
-            acted += int(value_fields[1]) # subfield 1 is movies starred in count
-            directed += int(value_fields[2]) # subfield 2 is movies directed count
+            acted += int(value_fields[0]) # subfield 1 is movies starred in count
+            directed += int(value_fields[1]) # subfield 2 is movies directed count
 
         else: # if person changed
             if current_person_id: # don't print empty person
                 print(f"{current_person_id}\t{acted},{directed}") # print prev. person
 
-            acted = int(value_fields[1])
-            directed = int(value_fields[2])
+            acted = int(value_fields[0])
+            directed = int(value_fields[1])
             current_person_id = person_id
 
     if current_person_id: # don't print empty person
