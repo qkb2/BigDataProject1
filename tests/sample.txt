@@ -1,0 +1,50 @@
+tt2387089	1	nm1813959	self	\N	["Herself - Host"]
+tt0956162	6	nm1270819	writer	screenplay	\N
+tt0794745	1	nm0723910	actress	\N	["Pauline"]
+tt9449496	9	nm2412793	writer	\N	\N
+tt9319512	3	nm10170208	actor	\N	["Riku Odajima"]
+tt2808286	7	nm3925477	editor	\N	\N
+tt3455400	3	nm4576887	editor	\N	\N
+tt5893228	4	nm5853904	cinematographer	\N	\N
+tt5080734	7	nm0697426	actress	\N	["Chabe"]
+tt8614032	2	nm9937380	actress	\N	["Church goer"]
+tt8455130	2	nm5753764	self	\N	["Himself - Correspondent"]
+tt10891108	4	nm7862957	actress	\N	\N
+tt1635467	4	nm1925421	actor	\N	["Narrator"]
+tt2232424	8	nm2509120	composer	\N	\N
+tt10875156	5	nm4196436	director	\N	\N
+tt0944193	1	nm2519421	writer	nonfiction book	\N
+tt7151170	1	nm8844775	director	\N	\N
+tt1381406	7	nm3380490	producer	producer	\N
+tt5307314	10	nm5810823	actress	\N	["Llinos"]
+tt9704414	7	nm1928493	actor	\N	["Whodini"]
+tt2642746	1	nm5480572	self	\N	["Herself"]
+tt6316440	3	nm1977598	director	\N	\N
+tt1845082	9	nm0365766	self	\N	["Himself"]
+tt2257867	3	nm2091965	director	\N	\N
+tt9171172	3	nm1389654	actress	\N	["Diwani Valeriana"]
+tt1148484	8	nm0122427	writer	writer	\N
+tt4261232	8	nm3053887	writer	head writer	\N
+tt3037446	8	nm5260044	self	\N	["Himself - Weather Forecaster"]
+tt10973678	2	nm0339608	producer	producer	\N
+tt3463170	7	nm1244547	writer	co-creator	\N
+tt0123482	1	nm0034655	actress	\N	\N
+tt8284570	9	nm0633719	composer	\N	\N
+tt7333276	6	nm8290197	self	\N	["Himself"]
+tt9474286	4	nm3274458	director	\N	\N
+tt7782828	6	nm1842331	actor	\N	["Francisco 'Paco' Montiel"]
+tt3532544	3	nm2148045	actress	\N	["Mother"]
+tt10491260	6	nm1294793	director	\N	\N
+tt6703444	2	nm1658423	actor	\N	["Stefano"]
+tt1482638	6	nm0736966	writer	creator	\N
+tt9687344	5	nm5054027	writer	story & screeplay	\N
+tt0911993	5	nm0728065	director	\N	\N
+tt7175582	2	nm0048550	self	\N	["Herself - Card Dealer"]
+tt0049363	7	nm0103084	writer	original screenplay	\N
+tt1671350	8	nm0564025	cinematographer	\N	\N
+tt5359308	1	nm3687037	cinematographer	\N	\N
+tt0939057	3	nm0172552	actress	\N	["Cindy"]
+tt7877662	4	nm0052878	director	\N	\N
+tt7585760	6	nm0970473	director	\N	\N
+tt6577936	1	nm0858669	actor	\N	["Yitzhak"]
+tt8946116	10	nm1101202	writer	\N	\N
