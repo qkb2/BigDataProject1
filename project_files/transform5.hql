@@ -1,7 +1,7 @@
 -- Parameters for locations
-SET actor_counts_location=${actor_counts_location};
-SET actor_names_location=${actor_names_location};
-SET output_location=${output_location};
+SET actor_counts_location=${input_dir3};
+SET actor_names_location=${input_dir4};
+SET output_location=${output_dir6};
 
 -- External table definitions
 CREATE EXTERNAL TABLE IF NOT EXISTS actor_counts(
@@ -56,13 +56,29 @@ RankedDirectors AS (
     WHERE n.primaryProfession REGEXP '(^|,)director(,|$)'
 )
 
--- Export the result to HDFS in JSON format
+-- Generate JSON lines with column names directly from the CTEs
 INSERT OVERWRITE DIRECTORY '${hiveconf:output_location}'
-ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.JsonSerDe'
-SELECT primaryName, primaryProfessionGendered, actedCount
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\n'
+STORED AS TEXTFILE
+SELECT 
+    CONCAT(
+        '{',
+        '"name": "', primaryName, '", ',
+        '"role": "', primaryProfessionGendered, '", ',
+        '"movies": ', CAST(actedCount AS STRING),
+        '}'
+    )
 FROM RankedActors
 WHERE rank <= 3
 UNION ALL
-SELECT primaryName, primaryProfessionGendered, directedCount
+SELECT 
+    CONCAT(
+        '{',
+        '"name": "', primaryName, '", ',
+        '"role": "', primaryProfessionGendered, '", ',
+        '"movies": ', CAST(directedCount AS STRING),
+        '}'
+    )
 FROM RankedDirectors
 WHERE rank <= 3;

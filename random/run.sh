@@ -2,10 +2,10 @@
 
 # Define paths
 HADOOP_HOME="/usr/local/hadoop"
-INPUT_DIR="input/datasource1"
-OUTPUT_DIR="output"
-MAPPER_SCRIPT="mapper.py"
-REDUCER_SCRIPT="reducer.py"
+INPUT_DIR="../input/datasource1"
+OUTPUT_DIR="../output"
+MAPPER_SCRIPT="../project_files/mapper2.py"
+REDUCER_SCRIPT="../project_files/reducer2.py"
 STREAMING_JAR="$HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-*.jar"
 
 # Remove the output directory if it already exists
