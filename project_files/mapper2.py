@@ -17,8 +17,7 @@ def main(argv):
         if role == "actor" or role == "actress" or role == "self":
             acted = 1
             
-        if directed > 0 or acted > 0: # filter out non-actor/non-director roles
-            print(f"{person_id}\t{acted},{directed}") # newline is implicitly added by print
+        print(f"{person_id}\t{acted},{directed}") # newline is implicitly added by print
 
 if __name__ == "__main__":
      main(sys.argv)
