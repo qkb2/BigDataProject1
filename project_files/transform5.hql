@@ -1,3 +1,10 @@
+-- Clear previous attempt
+DROP TABLE IF EXISTS actor_counts; 
+DROP TABLE IF EXISTS actor_names; 
+DROP VIEW IF EXISTS rankedDirectors; 
+DROP VIEW IF EXISTS rankedActors; 
+DROP TABLE IF EXISTS combined_results;
+
 -- External table definitions
 CREATE EXTERNAL TABLE IF NOT EXISTS actor_counts(
     id STRING,
@@ -80,9 +87,3 @@ ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\n'
 STORED AS TEXTFILE
 SELECT * FROM combined_results;
-
-DROP TABLE actor_counts; 
-DROP TABLE actor_names; 
-DROP VIEW rankedDirectors; 
-DROP VIEW rankedActors; 
-DROP TABLE combined_results;
