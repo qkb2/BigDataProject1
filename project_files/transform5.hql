@@ -31,7 +31,7 @@ FIELDS TERMINATED BY '\t'
 STORED AS TEXTFILE
 LOCATION '${hivevar:input_dir4}';
 
--- Step 1: Create a view to rank actors and actresses
+-- Create a view to rank actors and actresses
 CREATE VIEW RankedActors AS
 SELECT 
     n.primaryName, 
@@ -46,7 +46,7 @@ FROM actor_names n
 JOIN actor_counts c ON n.id = c.id
 WHERE n.primaryProfession REGEXP '(^|,)actor(,|$)|(^|,)actress(,|$)';
 
--- Step 2: Create a view to rank directors
+-- Create a view to rank directors
 CREATE VIEW RankedDirectors AS
 SELECT 
     n.primaryName, 
@@ -58,7 +58,7 @@ FROM actor_names n
 JOIN actor_counts c ON n.id = c.id
 WHERE n.primaryProfession REGEXP '(^|,)director(,|$)';
 
--- Step 3: Output JSON lines with top-ranked actors/actresses and directors
+-- Output JSON lines with top-ranked actors/actresses and directors
 CREATE TABLE combined_results AS
 SELECT CONCAT(
         '{',
