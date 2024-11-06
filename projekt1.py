@@ -49,7 +49,7 @@ with DAG(
 -files {{ params.dags_home }}/project_files/mapper2.py,\
 {{ params.dags_home }}/project_files/reducer2.py \
 -input {{ params.input_dir }}/datasource1 \
--mapper  mapper2.py \
+-mapper mapper2.py \
 -combiner reducer2.py \
 -reducer reducer2.py \
 -output {{ params.output_mr_dir }}
