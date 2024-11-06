@@ -1,8 +1,3 @@
--- Parameters for locations
-SET actor_counts_location=${input_dir3};
-SET actor_names_location=${input_dir4};
-SET output_location=${output_dir6};
-
 -- External table definitions
 CREATE EXTERNAL TABLE IF NOT EXISTS actor_counts(
     id STRING,
@@ -14,7 +9,7 @@ WITH SERDEPROPERTIES (
     "input.regex" = "([^\\t]+)\\t(\\d+),(\\d+)"
 )
 STORED AS TEXTFILE
-LOCATION '${actor_counts_location}';
+LOCATION '${hivevar:input_dir3}';
 
 CREATE EXTERNAL TABLE IF NOT EXISTS actor_names(
     id STRING, 
@@ -27,7 +22,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS actor_names(
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\t'
 STORED AS TEXTFILE
-LOCATION '${actor_names_location}';
+LOCATION '${hivevar:input_dir4}';
 
 -- Step 1: Create a view to rank actors and actresses
 CREATE VIEW RankedActors AS
@@ -80,8 +75,14 @@ SELECT CONCAT(
 FROM RankedDirectors
 WHERE rank <= 3;
 
-INSERT OVERWRITE DIRECTORY '${output_location}'
+INSERT OVERWRITE DIRECTORY '${hivevar:output_dir6}'
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\n'
 STORED AS TEXTFILE
 SELECT * FROM combined_results;
+
+DROP TABLE actor_counts; 
+DROP TABLE actor_names; 
+DROP VIEW rankedDirectors; 
+DROP VIEW rankedActors; 
+DROP TABLE combined_results;
