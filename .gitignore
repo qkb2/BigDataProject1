@@ -1,3 +1,5 @@
-input/
-output/
-stuff/
+input*
+output*
+*.json
+*.jsonl
+*.pdf
